@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Debugging Detective</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <p class="eyebrow">WEB LAB // CASE 001</p>
+    <h1>The page is broken.</h1>
+    <p id="intro">Your mission: inspect the evidence and restore this mini product page.</p>
+    <div class="product">
+      <div class="orb" aria-hidden="true">✦</div>
+      <div>
+        <h2>Focus Fuel</h2>
+        <p>A tiny fictional app for turning plans into progress.</p>
+      </div>
+    </div>
+    <button id="launch-button">Launch demo</button>
+    <p id="status" class="status" aria-live="polite">Status: waiting</p>
+    <ul id="clues">
+      <li>Layout should be centered.</li>
+      <li>The button should update the status.</li>
+      <li>The page should remain readable on a narrow screen.</li>
+    </ul>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

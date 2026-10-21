@@ -1,0 +1,37 @@
+/* DEBUG CHALLENGE: some declarations/selectors are intentionally wrong. */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  background: #101827;
+  color: #f3f6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(680px, 100%);
+  background: #1b2940;
+  border: 1px solid #31435f;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 20px 70px #0005;
+}
+
+.eyebrow { letter-spacing: .16em; font-size: .75rem; color: #8dd8ff; }
+.product { display: flex; gap: 18px; align-items: center; margin: 24px 0; }
+.orb { display: grid; place-items: center; width: 76px; height: 76px; border-radius: 20px; background: #6c5ce7; font-size: 2rem; flex-shrink: 0; }
+button { border: 0; border-radius: 12px; padding: 12px 18px; background: #8dd8ff; color: #101827; font-weight: 700; cursor: pointer; }
+button:hover { transform: translateY(-2px); }
+.status { color: #a8f0c6; font-weight: 600; }
+#clues { line-height: 1.8; }
+
+/* Clue: the narrow-screen rule below targets the wrong class. */
+@media (max-width: 520px) {
+  .products { flex-direction: column; align-items: flex-start; }
+  .card { padding: 20px; }
+}
