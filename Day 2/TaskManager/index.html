@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <p class="eyebrow">WEB LAB · MINI PROJECT</p>
+      <h1>Task Manager</h1>
+      <p class="subtitle">A small place to get things out of your head.</p>
+    </header>
+
+    <section class="task-panel" aria-labelledby="task-heading">
+      <h2 id="task-heading">Your tasks</h2>
+      <form id="task-form">
+        <label class="sr-only" for="task-input">New task</label>
+        <input id="task-input" type="text" placeholder="e.g. Finish the API challenge" maxlength="120" autocomplete="off" required />
+        <button class="primary-btn" type="submit">Add task</button>
+      </form>
+
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All <span id="count-all">0</span></button>
+          <button type="button" class="filter-btn" data-filter="active" aria-pressed="false">Active <span id="count-active">0</span></button>
+          <button type="button" class="filter-btn" data-filter="completed" aria-pressed="false">Completed <span id="count-completed">0</span></button>
+        </div>
+        <button type="button" id="clear-completed" class="text-btn">Clear completed</button>
+      </div>
+
+      <p id="message" class="message" role="status" aria-live="polite">Add your first task to get started.</p>
+      <ul id="task-list" class="task-list" aria-label="Tasks"></ul>
+    </section>
+
+    <footer class="app-footer">
+      <span>Built with HTML, CSS & JavaScript</span>
+      <span id="storage-status">Saved in this browser</span>
+    </footer>
+  </main>
+</body>
+</html>
